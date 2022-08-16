@@ -1,0 +1,43 @@
+// @font-face {
+//   font-family: "TT Norms Pro";
+//   src: url(../fonts/TT\ Norms\ Pro\ Bold.otf) font-weight-bold,
+//     url(../fonts/TT\ Norms\ Pro\ Medium.otf) font-weight-medium,
+//     url(../fonts/TT\ Norms\ Pro\ Regular.otf) font-weight-regular;
+// }
+
+// COLORS
+$color-primary: #202124;
+$color-primary-light: #63656f;
+$color-secondary: #a14eea;
+$color-secondary-light: #a859eb;
+$color-terciary: #ababab;
+$color-terciary-light: #f3f3f3;
+$color-white: #fff;
+
+// // FONTS
+// $font-primary: "TT Norms Pro", sans-serif;
+
+// BREAKPOINTS
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "TT Norms Pro", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 10vh 80vh 90vh repeat(4, 80vh) 60vh;
+  grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+}

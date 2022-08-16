@@ -1,0 +1,83 @@
+.navigation {
+  width: 100%;
+  padding: 3.5rem;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    width: 17rem;
+    height: auto;
+  }
+
+  &__menu {
+    font-size: 1.5rem;
+    color: $color-secondary;
+
+    display: grid;
+    grid-template-columns: min-content repeat(2, 1fr);
+    column-gap: 1rem;
+    align-items: center;
+
+    &__open {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1rem;
+      align-items: center;
+
+      &--hamburger {
+        border: none;
+        border-radius: none;
+        width: 2rem;
+        height: 0.2rem;
+        background-color: $color-secondary;
+      }
+
+      &--hamburger::before,
+      &--hamburger::after {
+        display: block;
+        content: "";
+        border: none;
+        border-radius: none;
+        width: 2rem;
+        height: 0.2rem;
+        background-color: $color-secondary;
+      }
+
+      &--hamburger::before {
+        transform: translateY(-0.7rem);
+      }
+
+      &--hamburger::after {
+        transform: translateY(0.5rem);
+      }
+    }
+
+    &__lang:active,
+    &__lang:visited {
+      text-decoration: none;
+    }
+
+    &__messenger {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+}
+
+.btn-white {
+  background-color: transparent;
+  height: 5rem;
+  width: 5rem;
+
+  border: 2px solid $color-terciary-light;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px 0px $color-terciary-light;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
