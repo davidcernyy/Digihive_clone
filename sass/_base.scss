@@ -38,6 +38,6 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 10vh 80vh 90vh repeat(4, 80vh) 60vh;
+  grid-template-rows: 10vh 80vh 90vh 70vh repeat(3, 80vh) 60vh;
   grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
 }

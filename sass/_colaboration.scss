@@ -1,4 +1,139 @@
 .colaboration {
   grid-column: 2/3;
   grid-row: 4/5;
+
+  padding: 3rem;
+
+  display: grid;
+  grid-template-columns: 60% 40%;
+  column-gap: 10rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33333333333%);
+    grid-template-rows: repeat(6, 16.6666667%);
+    row-gap: 2rem;
+    column-gap: 2rem;
+
+    &--1 {
+      grid-column: 1/2;
+      grid-row: 2/4;
+    }
+
+    &--2 {
+      grid-column: 2/3;
+      grid-row: 1/3;
+    }
+
+    &--3 {
+      grid-column: 3/4;
+      grid-row: 2/4;
+    }
+
+    &--4 {
+      grid-column: 1/2;
+      grid-row: 4/6;
+    }
+
+    &--5 {
+      grid-column: 2/3;
+      grid-row: 5/7;
+    }
+
+    &--6 {
+      grid-column: 3/4;
+      grid-row: 4/6;
+    }
+
+    &--logo {
+      grid-column: 2/3;
+      grid-row: 3/5;
+      list-style: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 15px;
+      background-image: linear-gradient(
+        to left,
+        #24d2ee 0,
+        #6991f0 30%,
+        #c52fef 100%
+      );
+
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    h2 {
+      padding: 2.5rem;
+      color: $color-primary;
+      font-size: 5rem;
+    }
+
+    p {
+      padding: 2.5rem;
+      line-height: 3.3rem;
+      color: $color-primary-light;
+      font-size: 2rem;
+    }
+
+    &--link {
+      text-decoration: none;
+      margin-top: 2.5rem;
+      margin-left: 2.5rem;
+      padding: 2.5rem 4rem;
+      font-size: 1.8rem;
+      color: #fff;
+      border-radius: 50px;
+      background-image: linear-gradient(
+        to left,
+        #24d2ee 0,
+        #6991f0 30%,
+        #c52fef 100%
+      );
+      transition: all 0.3s;
+    }
+
+    &--link:hover {
+      background-image: linear-gradient(to left, #c52fef 0, #c52fef 100%);
+    }
+  }
+}
+
+.card {
+  border: 2px solid $color-terciary-light;
+  box-shadow: 0px 2px 4px 0px $color-terciary-light;
+  border-radius: 15px;
+
+  text-decoration: none;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 30%;
+    height: 30%;
+    padding-bottom: 2em;
+  }
+
+  p {
+    padding-top: 2rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-primary-light;
+  }
 }
