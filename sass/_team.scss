@@ -1,4 +1,113 @@
 .team {
-  grid-row: 6/7;
-  grid-column: 2/3;
+  width: 140rem;
+  height: 50rem;
+  display: grid;
+  grid-template-columns: 55rem 85rem;
+
+  margin-bottom: 40rem;
+
+  &__text {
+    &--icon {
+      width: 5rem;
+      height: 5rem;
+      margin-bottom: 4rem;
+    }
+
+    &--header {
+      margin-bottom: 4rem;
+    }
+
+    &--paragraph {
+      margin-bottom: 4rem;
+    }
+
+    &--link-container {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.7rem;
+
+      &--link-1,
+      &--link-2 {
+        text-align: center;
+        padding: 2rem 1rem;
+        width: 45%;
+        background-color: transparent;
+
+        a {
+          text-decoration: none;
+          color: $color-secondary-light;
+        }
+      }
+
+      &--link-1 {
+        border: 2px solid $color-terciary-light;
+        border-radius: 50px;
+        box-shadow: 0px 2px 4px 0px $color-terciary-light;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #fff;
+          background-color: $color-secondary-light;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &__pictures {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--grid {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &--1 {
+      height: 70%;
+      align-self: flex-end;
+    }
+
+    &--instagram {
+      height: 70%;
+      width: 30%;
+
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-align: center;
+      background-image: linear-gradient(
+        -130deg,
+        #24d2ee 0,
+        #6991f0 30%,
+        #c52fef 100%
+      );
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &--icon {
+        display: block;
+        height: 4rem;
+        width: 4rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--instagram,
+    &--1,
+    &--2,
+    &--3,
+    &--4 {
+      margin: 1rem;
+      border-radius: 15px;
+    }
+  }
 }

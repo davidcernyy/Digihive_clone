@@ -1,6 +1,105 @@
+.footer-intro {
+  margin-bottom: 10rem;
+  font-size: 2rem;
+  color: $color-primary;
+}
+
 .footer {
+  width: 160rem;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  background-color: aqua;
-  grid-row: 7/8;
-  grid-column: 1/-1;
+  background-color: $color-primary;
+
+  &__branches {
+    margin-left: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--branch {
+      padding: 10rem;
+      text-align: center;
+
+      &--title {
+        color: #fff;
+        font-size: 4rem;
+        padding: 2rem 0;
+      }
+
+      &--adress {
+        color: $color-terciary;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+      }
+
+      &--email {
+        text-decoration: underline;
+        color: $color-secondary-light;
+      }
+    }
+  }
+
+  &__message-link {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 2rem 5rem;
+    background-image: linear-gradient(
+      to left,
+      #24d2ee 0,
+      #6991f0 30%,
+      #c52fef 100%
+    );
+    margin-bottom: 10rem;
+  }
+
+  &__bottom {
+    width: 160rem;
+    border-top: 1px solid $color-primary-light;
+    padding: 5rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--copyright {
+      color: $color-terciary;
+      font-size: 1.3rem;
+      padding: 0 3rem;
+    }
+
+    &--links {
+      text-align: center;
+      padding: 0 3rem;
+
+      display: flex;
+      justify-content: space-between;
+
+      &--link {
+        color: #fff;
+        padding: 0 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 900;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+
+    &--social {
+      &--link {
+        color: $color-terciary;
+        font-size: 1.3rem;
+        padding: 0 1.5rem;
+        text-decoration: none;
+      }
+    }
+  }
 }

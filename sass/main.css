@@ -9,6 +9,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 body {
@@ -16,9 +19,9 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-rows: 10vh 80vh 90vh 70vh repeat(3, 80vh) 60vh;
-  grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navigation {
@@ -91,9 +94,8 @@ body {
 }
 
 .header {
+  width: 150rem;
   padding: 3rem 5rem;
-  grid-row: 2/3;
-  grid-column: 2/3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -170,15 +172,16 @@ body {
   }
 }
 .portfolio {
+  width: 160rem;
+  height: 125rem;
   padding: 3rem;
-  grid-row: 3/4;
-  grid-column: 2/3;
   display: grid;
-  grid-template-columns: repeat(3, 33.3333333%);
+  grid-template-columns: repeat(3, 53.3333333333rem);
   grid-template-rows: repeat(5, 20%);
   justify-content: center;
   column-gap: 3rem;
   row-gap: 5rem;
+  margin-bottom: -18rem;
 }
 .portfolio__heading {
   font-size: 5rem;
@@ -258,46 +261,47 @@ body {
 }
 
 .colaboration {
-  grid-column: 2/3;
-  grid-row: 4/5;
-  padding: 3rem;
+  width: 160rem;
+  height: 85rem;
   display: grid;
-  grid-template-columns: 60% 40%;
-  column-gap: 10rem;
+  grid-template-columns: 85rem 55rem;
+  column-gap: 20rem;
+  justify-content: center;
+  margin-bottom: 20rem;
 }
 .colaboration__list {
   display: grid;
-  grid-template-columns: repeat(3, 33.3333333333%);
-  grid-template-rows: repeat(6, 16.6666667%);
+  grid-template-columns: repeat(6, 14rem);
+  grid-template-rows: repeat(6, 14rem);
   row-gap: 2rem;
   column-gap: 2rem;
 }
 .colaboration__list--1 {
-  grid-column: 1/2;
+  grid-column: 1/3;
   grid-row: 2/4;
 }
 .colaboration__list--2 {
-  grid-column: 2/3;
+  grid-column: 3/5;
   grid-row: 1/3;
 }
 .colaboration__list--3 {
-  grid-column: 3/4;
+  grid-column: 5/7;
   grid-row: 2/4;
 }
 .colaboration__list--4 {
-  grid-column: 1/2;
+  grid-column: 1/3;
   grid-row: 4/6;
 }
 .colaboration__list--5 {
-  grid-column: 2/3;
+  grid-column: 3/5;
   grid-row: 5/7;
 }
 .colaboration__list--6 {
-  grid-column: 3/4;
+  grid-column: 5/7;
   grid-row: 4/6;
 }
 .colaboration__list--logo {
-  grid-column: 2/3;
+  grid-column: 3/5;
   grid-row: 3/5;
   list-style: none;
   display: flex;
@@ -343,6 +347,8 @@ body {
 }
 
 .card {
+  width: 100%;
+  height: 100%;
   border: 2px solid #f3f3f3;
   box-shadow: 0px 2px 4px 0px #f3f3f3;
   border-radius: 15px;
@@ -363,13 +369,13 @@ body {
 }
 
 .about {
-  grid-row: 5/6;
-  grid-column: 2/3;
+  width: 160rem;
   display: grid;
   grid-template-rows: repeat(7, 14.2857142857%);
   grid-template-columns: repeat(6, 16.6666666667%);
   align-items: center;
   align-content: center;
+  margin-bottom: 10rem;
 }
 .about__picture {
   grid-column: 1/7;
@@ -436,15 +442,173 @@ body {
 }
 
 .team {
-  grid-row: 6/7;
-  grid-column: 2/3;
+  width: 140rem;
+  height: 50rem;
+  display: grid;
+  grid-template-columns: 55rem 85rem;
+  margin-bottom: 40rem;
+}
+.team__text--icon {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 4rem;
+}
+.team__text--header {
+  margin-bottom: 4rem;
+}
+.team__text--paragraph {
+  margin-bottom: 4rem;
+}
+.team__text--link-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.7rem;
+}
+.team__text--link-container--link-1, .team__text--link-container--link-2 {
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 45%;
+  background-color: transparent;
+}
+.team__text--link-container--link-1 a, .team__text--link-container--link-2 a {
+  text-decoration: none;
+  color: #a859eb;
+}
+.team__text--link-container--link-1 {
+  border: 2px solid #f3f3f3;
+  border-radius: 50px;
+  box-shadow: 0px 2px 4px 0px #f3f3f3;
+  transition: all 0.3s;
+}
+.team__text--link-container--link-1:hover {
+  color: #fff;
+  background-color: #a859eb;
+}
+.team__text--link-container--link-1:hover a {
+  color: #fff;
+}
+.team__pictures {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.team__pictures--grid {
+  display: flex;
+  justify-content: flex-end;
+}
+.team__pictures--1 {
+  height: 70%;
+  align-self: flex-end;
+}
+.team__pictures--instagram {
+  height: 70%;
+  width: 30%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  background-image: linear-gradient(-130deg, #24d2ee 0, #6991f0 30%, #c52fef 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.team__pictures--instagram--icon {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  margin-bottom: 2rem;
+}
+.team__pictures--instagram, .team__pictures--1, .team__pictures--2, .team__pictures--3, .team__pictures--4 {
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+.footer-intro {
+  margin-bottom: 10rem;
+  font-size: 2rem;
+  color: #202124;
 }
 
 .footer {
+  width: 160rem;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  background-color: aqua;
-  grid-row: 7/8;
-  grid-column: 1/-1;
+  background-color: #202124;
+}
+.footer__branches {
+  margin-left: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__branches--branch {
+  padding: 10rem;
+  text-align: center;
+}
+.footer__branches--branch--title {
+  color: #fff;
+  font-size: 4rem;
+  padding: 2rem 0;
+}
+.footer__branches--branch--adress {
+  color: #ababab;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+.footer__branches--branch--email {
+  text-decoration: underline;
+  color: #a859eb;
+}
+.footer__message-link {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 2rem 5rem;
+  background-image: linear-gradient(to left, #24d2ee 0, #6991f0 30%, #c52fef 100%);
+  margin-bottom: 10rem;
+}
+.footer__bottom {
+  width: 160rem;
+  border-top: 1px solid #63656f;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__bottom--copyright {
+  color: #ababab;
+  font-size: 1.3rem;
+  padding: 0 3rem;
+}
+.footer__bottom--links {
+  text-align: center;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__bottom--links--link {
+  color: #fff;
+  padding: 0 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.footer__bottom--social--link {
+  color: #ababab;
+  font-size: 1.3rem;
+  padding: 0 1.5rem;
+  text-decoration: none;
 }
 
 .header-1 {

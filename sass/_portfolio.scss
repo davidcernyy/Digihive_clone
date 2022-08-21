@@ -1,15 +1,16 @@
 .portfolio {
+  width: 160rem;
+  height: 125rem;
   padding: 3rem;
 
-  grid-row: 3/4;
-  grid-column: 2/3;
-
   display: grid;
-  grid-template-columns: repeat(3, 33.3333333%);
+  grid-template-columns: repeat(3, calc(160rem / 3));
   grid-template-rows: repeat(5, 20%);
   justify-content: center;
   column-gap: 3rem;
   row-gap: 5rem;
+
+  margin-bottom: -18rem;
 
   &__heading {
     font-size: 5rem;
