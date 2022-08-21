@@ -1,0 +1,38 @@
+.header-1 {
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  line-height: 8.2rem;
+}
+
+.header-2 {
+  font-size: 5rem;
+  color: $color-primary;
+}
+
+.header-3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+}
+
+.header-4 {
+  color: $color-secondary-light;
+  font-size: 2rem;
+}
+
+.paragraph-text {
+  font-weight: 400;
+  line-height: 3rem;
+  color: $color-primary-light;
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+}
+
+.paragraph-tag {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $color-primary-light;
+}
