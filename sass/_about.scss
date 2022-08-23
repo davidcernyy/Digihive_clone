@@ -1,5 +1,19 @@
+.container-about {
+  width: 150rem;
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-largest-2) {
+    width: 90%;
+  }
+}
+
 .about {
-  width: 160rem;
+  align-self: center;
+  grid-column: 2/3;
+  grid-row: 5/6;
+
+  width: 100%;
 
   display: grid;
   grid-template-rows: repeat(7, calc(100% / 7));
@@ -10,12 +24,17 @@
 
   margin-bottom: 10rem;
 
+  @media only screen and (max-width: $bp-large) {
+    margin-bottom: 40rem;
+  }
+
   &__picture {
-    grid-column: 1 / 7;
+    grid-column: 1 / 8;
     grid-row: 1 / 5;
 
     &--pic {
       width: 100%;
+      height: fit-content;
       border-radius: 15px;
     }
   }
